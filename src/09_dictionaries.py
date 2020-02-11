@@ -60,4 +60,4 @@ print(waypoints)
 # YOUR CODE HERE
 
 for waypoint in waypoints:
-    print(waypoint)
+    print(waypoint["lat"], waypoint["lon"], waypoint["name"])
