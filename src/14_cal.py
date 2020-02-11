@@ -30,3 +30,10 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+#pseudocode for solving this challenge
+date_val = input("Enter a date value: ")
+print(date_val)
+#1. accept input from user
+#2. store user input in a variable
+#3. check input value and output a prompt back to the user
