@@ -59,6 +59,9 @@ print(f3(8))     # Should print 9
 # Note: Google "python keyword arguments".
 
 # YOUR CODE HERE
+def f4(**args):
+    for item in args:
+        print("key: {}, value: {}".format(item, args[item]))
 
 # Should print
 # key: a, value: 12
