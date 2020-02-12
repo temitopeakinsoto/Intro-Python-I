@@ -16,10 +16,11 @@ print(f1(1, 2))
 
 # YOUR CODE HERE
 def f2(*integers):
-    sum = 0
-    for integer in integers:
-        sum = sum + integer
-    return sum
+    return sum(integers)
+    # sum = 0
+    # for integer in integers:
+    #     sum = sum + integer
+    # return sum
 
 print(f2(1))                    # Should print 1
 print(f2(1, 3))                 # Should print 4
@@ -37,14 +38,9 @@ print(f2(*a))    # Should print 22
 # Note: Google "python default arguments" for a hint.
 
 # YOUR CODE HERE
-def f3(num1, num2=0):
-    if(num1 and num2): 
-        return num1 + num2
-    else:
-        if num1:
-            return num1 + 1
-        else:
-            return num2 + 1
+def f3(num1, num2=1):
+    return num1 + num2
+  
 
 print(f3(1, 2))  # Should print 3
 print(f3(8))     # Should print 9
@@ -60,8 +56,10 @@ print(f3(8))     # Should print 9
 
 # YOUR CODE HERE
 def f4(**args):
-    for item in args:
-        print("key: {}, value: {}".format(item, args[item]))
+    # for in args:
+    #     print("key: {}, value: {}".format(item, args[item]))
+    for (key, val) in args.items():
+        print("key: {}, value: {}".format(key, val))
 
 # Should print
 # key: a, value: 12
