@@ -37,6 +37,14 @@ print(f2(*a))    # Should print 22
 # Note: Google "python default arguments" for a hint.
 
 # YOUR CODE HERE
+def f3(num1, num2=0):
+    if(num1 and num2): 
+        return num1 + num2
+    else:
+        if num1:
+            return num1 + 1
+        else:
+            return num2 + 1
 
 print(f3(1, 2))  # Should print 3
 print(f3(8))     # Should print 9
