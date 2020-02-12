@@ -31,9 +31,16 @@ import sys
 import calendar
 from datetime import datetime
 
-#pseudocode for solving this challenge
-date_val = input("Enter a date value: ")
-print(date_val)
-#1. accept input from user
-#2. store user input in a variable
-#3. check input value and output a prompt back to the user
+args = sys.argv
+
+def print_calendar(year, month):
+  print(calendar.TextCalendar(firstweekday=0).formatmonth(year, month))
+
+if len(args) == 1 :
+  print_calendar(datetime.today().year, datetime.today().month)
+elif len(args) == 2:
+  print_calendar(datetime.today().year, int(args[1]))
+elif len(args) == 3:
+    print_calendar(int(args[2]), int(args[1]))
+else:
+  print("Program expects arguments [month] [year], both [month] and [year] are optional but first argument cannot be [year]")
